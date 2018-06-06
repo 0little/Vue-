@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据劫持</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+</head>
+<body>
+<div id="app">
+    <h1>
+        a的值{{a.a}}
+    </h1>
+    <h1>
+        b的值{{b}}
+    </h1>
+    <input type="text" v-model="b">
+</div>
+<script src="myMvvm.js"></script>
+<script>
+    let app=new mvvm({
+        el:'#app',
+        data:{
+            a:{a:'是a'},
+            c:'123',
+            b:'是b'
+        },
+        computed:{
+        }
+    })
+</script>
+</body>
